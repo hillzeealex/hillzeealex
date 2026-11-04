@@ -1,89 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-label="Alexander Hills: I turn ideas into products that scale. Product, Dev, DevOps, CI/CD, Run.">
   <style>
-    /* layout: identity on top, the delivery chain as 5 chevrons (w=256, tip=44) across the bottom band */
+    /* layout: identity on the left, the chain as an isometric stack of 5 layers (RUN is the foundation) on the right */
     .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-    .sweep { animation: sweep 5s cubic-bezier(.45,0,.25,1) infinite; }
-    @keyframes sweep { 0% { transform: translateX(-420px); } 70%, 100% { transform: translateX(1500px); } }
-    .halo { transform-origin: 1100px 301px; animation: halo 2.4s ease-out infinite; }
-    @keyframes halo { 0% { opacity: .8; transform: scale(1); } 100% { opacity: 0; transform: scale(2.8); } }
-    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .sweep { display: none; } }
+    .p { animation: float 4s ease-in-out infinite; }
+    .p2 { animation-delay: -.4s; } .p3 { animation-delay: -.8s; } .p4 { animation-delay: -1.2s; } .p5 { animation-delay: -1.6s; }
+    @keyframes float { 50% { transform: translateY(-5px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
   <defs>
     <clipPath id="card"><rect width="1280" height="440" rx="18"/></clipPath>
-    <clipPath id="band"><rect y="250" width="1280" height="190"/></clipPath>
     <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="1" cy="1" r="1" fill="#1b2433"/>
     </pattern>
-    <radialGradient id="glow" cx="0.85" cy="0.1" r="0.6">
-      <stop offset="0" stop-color="#1d3b72" stop-opacity="0.55"/>
+    <radialGradient id="glow" cx="0.68" cy="0.55" r="0.45">
+      <stop offset="0" stop-color="#1d3b72" stop-opacity="0.7"/>
       <stop offset="1" stop-color="#0a0d14" stop-opacity="0"/>
     </radialGradient>
-    <filter id="grain" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
-      <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 -.18"/>
-      <feComposite in2="SourceGraphic" operator="in"/>
-    </filter>
-    <linearGradient id="shine" x1="0" x2="1">
-      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#fff" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-    </linearGradient>
+    <!-- one plate: top face, left side, right side; centred on x=0, top vertex at y=0 -->
+    <g id="side"><path d="M-150 40L0 80V96L-150 56Z" fill="#000" fill-opacity="0.35"/><path d="M0 80L150 40V56L0 96Z" fill="#000" fill-opacity="0.55"/></g>
   </defs>
-
   <g clip-path="url(#card)">
     <rect width="1280" height="440" fill="#0a0d14"/>
-    <rect width="1280" height="250" fill="url(#dots)"/>
-    <rect width="1280" height="250" fill="url(#glow)"/>
+    <rect width="1280" height="440" fill="url(#dots)"/>
+    <rect width="1280" height="440" fill="url(#glow)"/>
 
-    <!-- identity -->
-    <text x="72" y="74" class="mono" font-size="14" letter-spacing="3" fill="#5b8def">GITHUB.COM/HILLZEEALEX</text>
-    <text x="68" y="146" class="sans" font-size="66" font-weight="700" letter-spacing="-2" fill="#eef2f7">Alexander Hills</text>
-    <text x="72" y="190" class="sans" font-size="28" font-weight="500" fill="#dfe6f0">I turn ideas into products that scale.</text>
-    <text x="72" y="222" class="sans" font-size="18" fill="#8b98a9">Production-ready from day one: tested, automated, built for nLPD &amp; GDPR.</text>
+    <text x="72" y="72" class="mono" font-size="14" letter-spacing="3" fill="#5b8def">GITHUB.COM/HILLZEEALEX</text>
+    <text x="68" y="148" class="sans" font-size="60" font-weight="700" letter-spacing="-2" fill="#eef2f7">Alexander</text>
+    <text x="68" y="214" class="sans" font-size="60" font-weight="700" letter-spacing="-2" fill="#eef2f7">Hills</text>
+    <text x="72" y="270" class="sans" font-size="26" font-weight="500" fill="#dfe6f0">I turn ideas into products that scale.</text>
+    <text x="72" y="302" class="sans" font-size="16" fill="#8b98a9">Production-ready from day one:</text>
+    <text x="72" y="326" class="sans" font-size="16" fill="#8b98a9">tested, automated, built for nLPD &amp; GDPR.</text>
 
-    <!-- the chain -->
-    <g>
-      <path d="M0 250H256L300 345L256 440H0Z" fill="#2747d8"/>
-      <path d="M256 250H512L556 345L512 440H256L300 345Z" fill="#3a63ee"/>
-      <path d="M512 250H768L812 345L768 440H512L556 345Z" fill="#5b8def"/>
-      <path d="M768 250H1024L1068 345L1024 440H768L812 345Z" fill="#9cc0ff"/>
-      <path d="M1024 250H1280V440H1024L1068 345Z" fill="#3dd68c"/>
+    <!-- layers, drawn from the foundation up -->
+    <g transform="translate(830 318)"><g class="p p5"><path d="M0 0L150 40L0 80L-150 40Z" fill="#3dd68c"/><use href="#side"/></g></g>
+    <g transform="translate(830 256)"><g class="p p4"><path d="M0 0L150 40L0 80L-150 40Z" fill="#9cc0ff"/><use href="#side"/></g></g>
+    <g transform="translate(830 194)"><g class="p p3"><path d="M0 0L150 40L0 80L-150 40Z" fill="#5b8def"/><use href="#side"/></g></g>
+    <g transform="translate(830 132)"><g class="p p2"><path d="M0 0L150 40L0 80L-150 40Z" fill="#3a63ee"/><use href="#side"/></g></g>
+    <g transform="translate(830 70)"><g class="p"><path d="M0 0L150 40L0 80L-150 40Z" fill="#2747d8"/><use href="#side"/></g></g>
+
+    <!-- labels -->
+    <g stroke="#2a3956" stroke-width="1">
+      <path d="M985 110H1020M985 172H1020M985 234H1020M985 296H1020M985 358H1020"/>
     </g>
-    <g clip-path="url(#band)">
-      <rect y="250" width="1280" height="190" fill="#000" filter="url(#grain)" opacity="0.6"/>
-      <rect class="sweep" y="250" width="320" height="190" fill="url(#shine)"/>
+    <g class="mono" font-size="12" font-weight="700" letter-spacing="2" fill="#c9d4e5">
+      <text x="1030" y="106">01 PRODUCT</text><text x="1030" y="168">02 DEV</text><text x="1030" y="230">03 DEVOPS</text><text x="1030" y="292">04 CI/CD</text><text x="1030" y="354" fill="#3dd68c">05 RUN ●</text>
     </g>
-
-    <g class="mono" font-size="15" font-weight="700" letter-spacing="2.5">
-      <text x="72"   y="306" fill="#ffffff">01 PRODUCT</text>
-      <text x="328"  y="306" fill="#ffffff">02 DEV</text>
-      <text x="584"  y="306" fill="#ffffff">03 DEVOPS</text>
-      <text x="840"  y="306" fill="#0a1a3d">04 CI/CD</text>
-      <text x="1096" y="306" fill="#06301c" dx="18">05 RUN</text>
-    </g>
-    <circle class="halo" cx="1100" cy="301" r="5" fill="none" stroke="#06301c" stroke-width="1.5"/>
-    <circle cx="1100" cy="301" r="5" fill="#06301c"/>
-
-    <g class="sans" font-size="15" font-weight="500">
-      <g fill="#dfe6ff">
-        <text x="72"  y="342">Specs · user flows</text>
-        <text x="72"  y="366">Prototypes · Figma</text>
-        <text x="328" y="342">TypeScript · Next.js</text>
-        <text x="328" y="366">React · React Native</text>
-        <text x="328" y="390">Python</text>
-        <text x="584" y="342">Docker · Linux</text>
-        <text x="584" y="366">PostgreSQL · Prisma</text>
-      </g>
-      <g fill="#0a1a3d">
-        <text x="840" y="342">GitHub Actions</text>
-        <text x="840" y="366">Vitest · pytest</text>
-      </g>
-      <g fill="#06301c">
-        <text x="1096" y="342">Infomaniak</text>
-        <text x="1096" y="366">Scalingo · Scaleway</text>
-        <text x="1096" y="390">nLPD &amp; GDPR</text>
-      </g>
+    <g class="sans" font-size="13" fill="#7d8ba0">
+      <text x="1030" y="125">Specs · Figma</text>
+      <text x="1030" y="187">TypeScript · Next.js · React</text>
+      <text x="1030" y="249">Docker · PostgreSQL · Prisma</text>
+      <text x="1030" y="311">GitHub Actions · Vitest</text>
+      <text x="1030" y="373">Infomaniak · Scalingo</text>
     </g>
   </g>
 </svg>
