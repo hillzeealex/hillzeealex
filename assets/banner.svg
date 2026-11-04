@@ -1,56 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-label="Alexander Hills: I turn ideas into products that scale. Product, Dev, DevOps, CI/CD, Run.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-label="Alexander HILLS: I turn ideas into products that scale. Product, Dev, DevOps, CI/CD and Run, each with its stack.">
   <style>
-    /* layout: identity on the left, the chain as an isometric stack of 5 layers (RUN is the foundation) on the right */
+    /* layout: identity on the left, isometric stack of 5 layers (RUN is the foundation) centred at x=720, detailed labels from x=872 */
     .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
     .p { animation: float 4s ease-in-out infinite; }
     .p2 { animation-delay: -.4s; } .p3 { animation-delay: -.8s; } .p4 { animation-delay: -1.2s; } .p5 { animation-delay: -1.6s; }
     @keyframes float { 50% { transform: translateY(-5px); } }
+    .halo { transform-origin: 934px 412px; animation: halo 2.4s ease-out infinite; }
+    @keyframes halo { 0% { opacity: .8; transform: scale(1); } 100% { opacity: 0; transform: scale(2.6); } }
     @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
   <defs>
-    <clipPath id="card"><rect width="1280" height="440" rx="18"/></clipPath>
+    <clipPath id="card"><rect width="1280" height="520" rx="18"/></clipPath>
     <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="1" cy="1" r="1" fill="#1b2433"/>
     </pattern>
-    <radialGradient id="glow" cx="0.68" cy="0.55" r="0.45">
+    <radialGradient id="glow" cx="0.56" cy="0.55" r="0.42">
       <stop offset="0" stop-color="#1d3b72" stop-opacity="0.7"/>
       <stop offset="1" stop-color="#0a0d14" stop-opacity="0"/>
     </radialGradient>
-    <!-- one plate: top face, left side, right side; centred on x=0, top vertex at y=0 -->
-    <g id="side"><path d="M-150 40L0 80V96L-150 56Z" fill="#000" fill-opacity="0.35"/><path d="M0 80L150 40V56L0 96Z" fill="#000" fill-opacity="0.55"/></g>
+    <!-- one plate centred on x=0, top vertex at y=0: top face 230 x 64, sides 14 deep -->
+    <path id="top" d="M0 0L115 32L0 64L-115 32Z"/>
+    <g id="side"><path d="M-115 32L0 64V78L-115 46Z" fill="#000" fill-opacity="0.35"/><path d="M0 64L115 32V46L0 78Z" fill="#000" fill-opacity="0.55"/></g>
   </defs>
   <g clip-path="url(#card)">
-    <rect width="1280" height="440" fill="#0a0d14"/>
-    <rect width="1280" height="440" fill="url(#dots)"/>
-    <rect width="1280" height="440" fill="url(#glow)"/>
+    <rect width="1280" height="520" fill="#0a0d14"/>
+    <rect width="1280" height="520" fill="url(#dots)"/>
+    <rect width="1280" height="520" fill="url(#glow)"/>
 
-    <text x="72" y="118" class="mono" font-size="14" letter-spacing="3" fill="#5b8def">GITHUB.COM/HILLZEEALEX</text>
-    <text x="68" y="190" class="sans" font-size="60" font-weight="700" letter-spacing="-2" fill="#eef2f7">Alexander HILLS</text>
-    <text x="72" y="244" class="sans" font-size="26" font-weight="500" fill="#dfe6f0">I turn ideas into products that scale.</text>
-    <text x="72" y="278" class="sans" font-size="16" fill="#8b98a9">Production-ready from day one:</text>
-    <text x="72" y="302" class="sans" font-size="16" fill="#8b98a9">tested, automated, built for nLPD &amp; GDPR.</text>
+    <!-- identity -->
+    <text x="72" y="196" class="mono" font-size="14" letter-spacing="3" fill="#5b8def">GITHUB.COM/HILLZEEALEX</text>
+    <text x="68" y="262" class="sans" font-size="54" font-weight="700" letter-spacing="-1.8" fill="#eef2f7">Alexander HILLS</text>
+    <text x="72" y="312" class="sans" font-size="24" font-weight="500" fill="#dfe6f0">I turn ideas into products that scale.</text>
+    <text x="72" y="346" class="sans" font-size="16" fill="#8b98a9">Production-ready from day one:</text>
+    <text x="72" y="370" class="sans" font-size="16" fill="#8b98a9">tested, automated, built for nLPD &amp; GDPR.</text>
 
     <!-- layers, drawn from the foundation up -->
-    <g transform="translate(830 318)"><g class="p p5"><path d="M0 0L150 40L0 80L-150 40Z" fill="#3dd68c"/><use href="#side"/></g></g>
-    <g transform="translate(830 256)"><g class="p p4"><path d="M0 0L150 40L0 80L-150 40Z" fill="#9cc0ff"/><use href="#side"/></g></g>
-    <g transform="translate(830 194)"><g class="p p3"><path d="M0 0L150 40L0 80L-150 40Z" fill="#5b8def"/><use href="#side"/></g></g>
-    <g transform="translate(830 132)"><g class="p p2"><path d="M0 0L150 40L0 80L-150 40Z" fill="#3a63ee"/><use href="#side"/></g></g>
-    <g transform="translate(830 70)"><g class="p"><path d="M0 0L150 40L0 80L-150 40Z" fill="#2747d8"/><use href="#side"/></g></g>
+    <g transform="translate(720 390)"><g class="p p5"><use href="#top" fill="#3dd68c"/><use href="#side"/></g></g>
+    <g transform="translate(720 300)"><g class="p p4"><use href="#top" fill="#9cc0ff"/><use href="#side"/></g></g>
+    <g transform="translate(720 210)"><g class="p p3"><use href="#top" fill="#5b8def"/><use href="#side"/></g></g>
+    <g transform="translate(720 120)"><g class="p p2"><use href="#top" fill="#3a63ee"/><use href="#side"/></g></g>
+    <g transform="translate(720 30)"><g class="p"><use href="#top" fill="#2747d8"/><use href="#side"/></g></g>
 
-    <!-- labels -->
+    <!-- leaders from each plate's right corner -->
     <g stroke="#2a3956" stroke-width="1">
-      <path d="M985 110H1020M985 172H1020M985 234H1020M985 296H1020M985 358H1020"/>
+      <path d="M838 62H862M838 152H862M838 242H862M838 332H862M838 422H862"/>
     </g>
-    <g class="mono" font-size="12" font-weight="700" letter-spacing="2" fill="#c9d4e5">
-      <text x="1030" y="106">01 PRODUCT</text><text x="1030" y="168">02 DEV</text><text x="1030" y="230">03 DEVOPS</text><text x="1030" y="292">04 CI/CD</text><text x="1030" y="354" fill="#3dd68c">05 RUN ●</text>
+
+    <!-- labels: stage, then its stack -->
+    <g class="mono" font-size="13" font-weight="700" letter-spacing="2" fill="#c9d4e5">
+      <text x="872" y="56">01 PRODUCT</text>
+      <text x="872" y="146">02 DEV</text>
+      <text x="872" y="236">03 DEVOPS</text>
+      <text x="872" y="326">04 CI/CD</text>
+      <text x="872" y="416" fill="#3dd68c">05 RUN</text>
     </g>
-    <g class="sans" font-size="13" fill="#7d8ba0">
-      <text x="1030" y="125">Specs · Figma · HTML mock-ups</text>
-      <text x="1030" y="187">TypeScript · Next.js · React</text>
-      <text x="1030" y="249">Docker · PostgreSQL · Prisma</text>
-      <text x="1030" y="311">GitHub Actions</text><text x="1030" y="329">Automated tests · AI agent QA</text>
-      <text x="1030" y="373">Infomaniak · Scalingo</text>
+    <circle class="halo" cx="934" cy="412" r="4" fill="none" stroke="#3dd68c" stroke-width="1.5"/>
+    <circle cx="934" cy="412" r="4" fill="#3dd68c"/>
+
+    <g class="sans" font-size="15" fill="#8d9bb0">
+      <text x="872" y="78">Specs · user flows · Figma</text>
+      <text x="872" y="98">HTML mock-ups · clickable prototypes</text>
+
+      <text x="872" y="168">TypeScript · Next.js · React · Tailwind</text>
+      <text x="872" y="188">React Native · Python · FastAPI · Stripe</text>
+      <text x="872" y="208" fill="#b9c8e0">AI agents · custom harnesses · Claude · MCP</text>
+
+      <text x="872" y="258">Docker · Compose · Nginx · Linux</text>
+      <text x="872" y="278">PostgreSQL · Prisma · Supabase · S3</text>
+
+      <text x="872" y="348">GitHub Actions · lint · type-check</text>
+      <text x="872" y="368">Automated tests · AI agent QA</text>
+
+      <text x="872" y="438">Infomaniak · Scalingo · Scaleway · Vercel</text>
+      <text x="872" y="458">Sentry · health checks · nLPD &amp; GDPR</text>
     </g>
   </g>
 </svg>
