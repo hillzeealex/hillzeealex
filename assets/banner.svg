@@ -49,7 +49,7 @@
       <text x="1030" y="125">Specs · Figma · HTML mock-ups</text>
       <text x="1030" y="187">TypeScript · Next.js · React</text>
       <text x="1030" y="249">Docker · PostgreSQL · Prisma</text>
-      <text x="1030" y="311">GitHub Actions · Vitest</text>
+      <text x="1030" y="311">GitHub Actions</text><text x="1030" y="329">Automated tests · AI agent QA</text>
       <text x="1030" y="373">Infomaniak · Scalingo</text>
     </g>
   </g>
