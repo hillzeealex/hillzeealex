@@ -6,7 +6,7 @@
     .p { animation: float 4s ease-in-out infinite; }
     .p2 { animation-delay: -.4s; } .p3 { animation-delay: -.8s; } .p4 { animation-delay: -1.2s; } .p5 { animation-delay: -1.6s; }
     @keyframes float { 50% { transform: translateY(-5px); } }
-    .halo { transform-origin: 934px 412px; animation: halo 2.4s ease-out infinite; }
+    .halo { transform-origin: 946px 412px; animation: halo 2.4s ease-out infinite; }
     @keyframes halo { 0% { opacity: .8; transform: scale(1); } 100% { opacity: 0; transform: scale(2.6); } }
     @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
@@ -55,8 +55,8 @@
       <text x="872" y="326">04 CI/CD</text>
       <text x="872" y="416" fill="#3dd68c">05 RUN</text>
     </g>
-    <circle class="halo" cx="934" cy="412" r="4" fill="none" stroke="#3dd68c" stroke-width="1.5"/>
-    <circle cx="934" cy="412" r="4" fill="#3dd68c"/>
+    <circle class="halo" cx="946" cy="412" r="4" fill="none" stroke="#3dd68c" stroke-width="1.5"/>
+    <circle cx="946" cy="412" r="4" fill="#3dd68c"/>
 
     <g class="sans" font-size="15" fill="#8d9bb0">
       <text x="872" y="78">Specs · user flows · Figma</text>
