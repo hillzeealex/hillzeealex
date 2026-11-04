@@ -6,7 +6,7 @@
     .p { animation: float 4s ease-in-out infinite; }
     .p2 { animation-delay: -.4s; } .p3 { animation-delay: -.8s; } .p4 { animation-delay: -1.2s; } .p5 { animation-delay: -1.6s; }
     @keyframes float { 50% { transform: translateY(-5px); } }
-    .halo { transform-origin: 1056px 350px; animation: halo 2.4s ease-out infinite; }
+    .halo { transform-origin: 1066px 350px; animation: halo 2.4s ease-out infinite; }
     @keyframes halo { 0% { opacity: .8; transform: scale(1); } 100% { opacity: 0; transform: scale(2.6); } }
     @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
@@ -47,30 +47,22 @@
       <path d="M955 110H982M955 172H982M955 234H982M955 296H982M955 358H982"/>
     </g>
 
-    <g class="mono" font-size="12" font-weight="700" letter-spacing="2" fill="#c9d4e5">
+    <g class="mono" font-size="13" font-weight="700" letter-spacing="2" fill="#c9d4e5">
       <text x="990" y="106">01 PRODUCT</text>
       <text x="990" y="168">02 DEV</text>
       <text x="990" y="230">03 DEVOPS</text>
       <text x="990" y="292">04 CI/CD</text>
       <text x="990" y="354" fill="#3dd68c">05 RUN</text>
     </g>
-    <circle class="halo" cx="1056" cy="350" r="4" fill="none" stroke="#3dd68c" stroke-width="1.5"/>
-    <circle cx="1056" cy="350" r="4" fill="#3dd68c"/>
+    <circle class="halo" cx="1066" cy="350" r="4" fill="none" stroke="#3dd68c" stroke-width="1.5"/>
+    <circle cx="1066" cy="350" r="4" fill="#3dd68c"/>
 
-    <g class="sans" font-size="14" fill="#7d8ba0">
-      <text x="990" y="125"><tspan fill="#c9d6ec">Agent use cases</tspan> · specs · prototypes</text>
-
-      <text x="990" y="187"><tspan fill="#c9d6ec">Custom agent harnesses</tspan> · Claude API</text>
-      <text x="990" y="205">MCP servers · TypeScript · Python</text>
-
-      <text x="990" y="249"><tspan fill="#c9d6ec">RAG · vector search</tspan> · PostgreSQL</text>
-      <text x="990" y="267">Docker · Linux</text>
-
-      <text x="990" y="311">GitHub Actions · automated tests</text>
-      <text x="990" y="329"><tspan fill="#c9d6ec">AI agents that test the pipeline</tspan></text>
-
-      <text x="990" y="373">Infomaniak · Scalingo · health checks</text>
-      <text x="990" y="391"><tspan fill="#c9d6ec">Swiss &amp; EU data</tspan> · nLPD &amp; GDPR</text>
+    <g class="sans" font-size="16" fill="#aab8cf">
+      <text x="990" y="128">Agent use cases · prototypes</text>
+      <text x="990" y="190">Custom agent harnesses · MCP</text>
+      <text x="990" y="252">RAG · vector search · Docker</text>
+      <text x="990" y="314">AI agents test the pipeline</text>
+      <text x="990" y="376">Swiss &amp; EU data · nLPD &amp; GDPR</text>
     </g>
   </g>
 </svg>
