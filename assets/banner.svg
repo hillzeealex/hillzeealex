@@ -32,7 +32,7 @@
     <text x="72" y="196" class="mono" font-size="14" letter-spacing="3" fill="#5b8def">GITHUB.COM/HILLZEEALEX</text>
     <text x="68" y="262" class="sans" font-size="54" font-weight="700" letter-spacing="-1.8" fill="#eef2f7">Alexander HILLS</text>
     <text x="72" y="312" class="sans" font-size="24" font-weight="500" fill="#dfe6f0">I turn ideas into products that scale.</text>
-    <text x="72" y="346" class="sans" font-size="16" fill="#8b98a9">Production-ready from day one:</text>
+    <text x="72" y="346" class="sans" font-size="16" fill="#8b98a9">Agentic AI, production-ready from day one:</text>
     <text x="72" y="370" class="sans" font-size="16" fill="#8b98a9">tested, automated, built for nLPD &amp; GDPR.</text>
 
     <!-- layers, drawn from the foundation up -->
@@ -59,21 +59,19 @@
     <circle cx="946" cy="412" r="4" fill="#3dd68c"/>
 
     <g class="sans" font-size="15" fill="#8d9bb0">
-      <text x="872" y="78">Specs · user flows · Figma</text>
-      <text x="872" y="98">HTML mock-ups · clickable prototypes</text>
+      <text x="872" y="80"><tspan fill="#c9d6ec">Agent use cases</tspan> · specs · prototypes</text>
 
-      <text x="872" y="168">TypeScript · Next.js · React · Tailwind</text>
-      <text x="872" y="188">React Native · Python · FastAPI · Stripe</text>
-      <text x="872" y="208" fill="#b9c8e0">AI agents · custom harnesses · Claude · MCP</text>
+      <text x="872" y="170"><tspan fill="#c9d6ec">Custom agent harnesses</tspan> · Claude API</text>
+      <text x="872" y="190">MCP servers · TypeScript · Python</text>
 
-      <text x="872" y="258">Docker · Compose · Nginx · Linux</text>
-      <text x="872" y="278">PostgreSQL · Prisma · Supabase · S3</text>
+      <text x="872" y="260"><tspan fill="#c9d6ec">RAG · vector search</tspan> · PostgreSQL</text>
+      <text x="872" y="280">Docker · Linux</text>
 
-      <text x="872" y="348">GitHub Actions · lint · type-check</text>
-      <text x="872" y="368">Automated tests · AI agent QA</text>
+      <text x="872" y="350">GitHub Actions · automated tests</text>
+      <text x="872" y="370"><tspan fill="#c9d6ec">AI agents that test the pipeline</tspan></text>
 
-      <text x="872" y="438">Infomaniak · Scalingo · Scaleway · Vercel</text>
-      <text x="872" y="458">Sentry · health checks · nLPD &amp; GDPR</text>
+      <text x="872" y="440">Infomaniak · Scalingo · health checks</text>
+      <text x="872" y="460"><tspan fill="#c9d6ec">Swiss &amp; EU data</tspan> · nLPD &amp; GDPR</text>
     </g>
   </g>
 </svg>
